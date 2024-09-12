@@ -3,7 +3,9 @@
 /*VAR*/
 :root {
     --black: #747c6c;
-    --light-gray: #dfdfdf;
+    --light-gray: #f6f6f6;
+    --dark-gray: #333333;
+    --gray: #e9e9e9;
     --blue: #001e36;
     --white: white;
     --orange: #f14a18;
@@ -29,32 +31,62 @@ ul {
 a {
     text-decoration: none;
 }
+
 /*FIN GENERAL*/
 
 /*HEADER*/
-header .info-header{
+header .info-header {
     background-color: var(--orange);
 }
-header .info-header p{
+
+header .info-header p {
     color: var(--white);
     text-align: center;
     padding: .3rem;
     font-size: .8rem;
 }
-header .navBar{
+
+header .header-logo {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    padding: .5rem;
+}
+
+header .header-logo img {
+    height: 4rem;
+}
+
+header .header-nav-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 2px 7px 12px -3px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 2px 7px 12px -3px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 2px 7px 12px -3px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+header .header-nav-bar.visible{
+    opacity: 1;
+}
+header .header-nav-bar ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-gray)
+}
+
+header .header-nav-bar ul li {
     padding: 1rem;
+    margin: 0 .5rem;
 }
-header .navBar img{
-    width: 15rem;
+
+header .header-nav-bar ul li a svg {
+    height: 1.5rem;
 }
-header .navBar svg{
-    height: 2rem;
-    margin-top: -.5rem;
-    margin-right: .9rem;
-}
+
 /*END HEADER*/
 
 /*HERO*/
@@ -63,11 +95,13 @@ header .navBar svg{
     overflow: hidden;
     width: 100%;
 }
+
 #noticias {
     display: flex;
     transition: transform 0.5s ease-in-out;
     align-items: center;
 }
+
 .noticia {
     flex: 0 0 100%;
     border-radius: .3rem;
@@ -79,13 +113,15 @@ header .navBar svg{
     object-fit: cover;
     border-radius: .3rem .3rem 0 0;
 }
-.container-indicadores{
+
+.container-indicadores {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: -3rem;
 }
+
 #indicadores {
     position: relative;
     display: flex;
@@ -106,22 +142,35 @@ header .navBar svg{
     margin: 0 .3rem;
     cursor: pointer;
 }
+
 .activo {
     background-color: var(--blue);
 }
+
 /*END HERO*/
 
 /*BANNER INFO*/
-.banner-info{
-    padding: 6rem 2rem;
+.banner-info {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 4rem 0;
 }
-.banner-info-element{
+.banner-info .container-info-elementos{
+    display: flex;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+}
+.banner-info-element {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-width: 100%;
+    padding: 0 2rem;
 }
-.banner-info-element-icon{
+
+.banner-info-element-icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -132,51 +181,67 @@ header .navBar svg{
     border-radius: 100%;
     margin-bottom: 1rem;
 }
-.banner-info .banner-info-element svg{
+
+.banner-info .banner-info-element svg {
     fill: var(--white);
 }
-.banner-info .banner-info-element h3{
+
+.banner-info .banner-info-element h3 {
     margin-bottom: 1rem;
 }
-.banner-info .banner-info-element p{
+
+.banner-info .banner-info-element p {
     text-align: center;
 }
-.banner-info .container-indicadores{
+
+.banner-info .container-indicadores {
     width: 100%;
     margin-top: 5rem;
 }
-.container-indicadores .indicadores{
+
+.container-indicadores .indicadores {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.banner-info .container-indicadores .indicadores .indicador{
+
+.banner-info .container-indicadores .indicadores .indicador {
     height: .5rem;
     width: .5rem;
     background-color: var(--black);
     margin: .3rem;
 }
+.banner-info .container-indicadores .indicadores .indicador-activo {
+    background-color: var(--blue);
+}
 /*END BANNER INFO*/
 
 /*OFERTAS*/
-.ofertas{
+.ofertas {
     padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 2rem;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
 }
-.ofertas h3{
+
+.ofertas h3 {
     width: 100%;
     text-align: center;
     font-weight: bold;
     font-size: 1.3rem;
+    margin-top: 2rem;
 }
-.contenedor-productos{
+
+.contenedor-productos {
     margin-top: 2rem;
     display: flex;
+    transition: transform 0.5s ease-in-out;
 }
-.contenedor-productos .producto{
+.contenedor-productos .producto {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -190,7 +255,8 @@ header .navBar svg{
     margin-right: 1rem;
     cursor: pointer;
 }
-.contenedor-productos .producto .producto-img{
+
+.contenedor-productos .producto .producto-img {
     height: 10rem;
     width: 100%;
     background-image: url("../resc/producto2.webp");
@@ -199,13 +265,15 @@ header .navBar svg{
     background-size: contain;
     margin-top: 1rem;
 }
-.contenedor-productos .producto h4{
+
+.contenedor-productos .producto h4 {
     margin-top: 1rem;
     height: 2.9rem;
     overflow: hidden;
-    padding:0rem 1rem;
+    padding: 0rem 1rem;
 }
-.contenedor-productos .producto span{
+
+.contenedor-productos .producto span {
     background-color: var(--blue);
     color: var(--white);
     padding: .3rem;
@@ -213,13 +281,15 @@ header .navBar svg{
     font-size: .7rem;
     margin: -3rem auto 0rem 1rem;
 }
-.contenedor-productos .producto p{
+
+.contenedor-productos .producto p {
     font-weight: bold;
     font-size: 1.1rem;
     color: var(--blue);
     margin: auto 1rem;
 }
-.contenedor-productos .producto button{
+
+.contenedor-productos .producto button {
     background-color: var(--orange);
     padding: .5rem;
     border: none;
@@ -229,22 +299,26 @@ header .navBar svg{
     border-radius: .5rem;
     margin: 1rem;
 }
+
 /*END OFERTAS*/
 
 /*CATEGORIAS*/
-.categoria{
+.categoria {
     display: flex;
     align-items: center;
     justify-content: space-around;
     height: 10rem;
     width: 100%;
+    padding: 1.5rem;
+    margin-bottom: 3rem;
 }
-.categoria h3{
+
+.categoria h3 {
     font-weight: bold;
-    width: 6rem;
     text-align: center;
 }
-.categoria-img{
+
+.categoria-img {
     height: 9rem;
     width: 9rem;
     background-image: url("../resc/producto.webp");
@@ -252,7 +326,85 @@ header .navBar svg{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 /*END CATEGORIAS*/
-.oculto{
+
+/*FOOTER*/
+footer .footer-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-gray);
+}
+footer .footer-info img{
+    height: 7.5rem;
+    margin: 3rem auto 2rem auto;
+}
+footer .rrss{
+    display: flex;
+    margin-bottom: 3rem;
+}
+footer .rrss a{
+    background-color: var(--blue);
+    padding: .5rem;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: .3rem;
+}
+footer .rrss a svg{
+    height: 1.3rem;
+    width: 1.3rem;
+    fill: var(--light-gray);
+}
+footer .legales{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: .8rem;
+    padding: 3rem 0 5rem 0;
+    background-color: var(--gray);
+}
+footer .legales p{
+    text-align: center;
+    margin-bottom: .5rem;
+}
+footer .legales img{
+    height: 5rem;
+    margin: 1rem auto;
+}
+footer .legales a{
+    font-weight: bold;
+}
+footer .legales .btn_arrepentimiento{
+    margin-top: .5rem;
+    padding: .5rem;
+    background-color: var(--black);
+    border-radius: .5rem;
+    color: var(--light-gray);
+    font-weight: normal;
+}
+footer .credit{
+    background-color: var(--dark-gray);
+    padding: .3rem;
+    width: 100%;
+    font-size: .8rem;
+    text-align: center;
+}
+footer .credit a{
+    color: var(--black); 
+}
+/*END FOOTER*/
+
+
+.oculto {
     display: none;
+}
+.divisor-secciones, .divisor-secciones-alt{
+    height: .2rem;
+    width: 100%;
+    background-color: var(--light-gray);
 }
