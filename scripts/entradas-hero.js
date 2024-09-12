@@ -1,10 +1,10 @@
 export let entradas = [
     {
-        "image": "../resc/hero1.webp",
-        "desc-img": "Lucía Jara y Walter Correa"
+        "image": "resc/hero1.webp",
+        "desc-img": "Notebook asus"
     },
     {
-        "image": "../resc/hero2.webp",
-        "desc-img": "Beneficios para afiliados"
+        "image": "resc/hero2.webp",
+        "desc-img": "Notebook Asus Pro"
     }
 ]
