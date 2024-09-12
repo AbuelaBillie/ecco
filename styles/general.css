@@ -259,7 +259,7 @@ header .header-nav-bar ul li a svg {
 .contenedor-productos .producto .producto-img {
     height: 10rem;
     width: 100%;
-    background-image: url("../resc/producto2.webp");
+    background-image: url("./resc/producto2.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -321,7 +321,7 @@ header .header-nav-bar ul li a svg {
 .categoria-img {
     height: 9rem;
     width: 9rem;
-    background-image: url("../resc/producto.webp");
+    background-image: url("./resc/producto.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
