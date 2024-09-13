@@ -11,7 +11,6 @@
     --orange: #f14a18;
     --white-shadow: rgba(255, 255, 255, 0.438);
 }
-
 /*END VAR*/
 
 /*GENERAL*/
@@ -31,19 +30,18 @@ ul {
 a {
     text-decoration: none;
 }
-
 /*FIN GENERAL*/
 
 /*HEADER*/
 header .info-header {
-    background-color: var(--orange);
+    background-color: var(--blue);
 }
 
 header .info-header p {
     color: var(--white);
     text-align: center;
     padding: .3rem;
-    font-size: .8rem;
+    font-size: .6rem;
 }
 
 header .header-logo {
@@ -86,7 +84,6 @@ header .header-nav-bar ul li {
 header .header-nav-bar ul li a svg {
     height: 1.5rem;
 }
-
 /*END HEADER*/
 
 /*HERO*/
@@ -104,14 +101,12 @@ header .header-nav-bar ul li a svg {
 
 .noticia {
     flex: 0 0 100%;
-    border-radius: .3rem;
 }
 
 .noticia img {
     height: 75vh;
     width: 100%;
     object-fit: cover;
-    border-radius: .3rem .3rem 0 0;
 }
 
 .container-indicadores {
@@ -146,7 +141,6 @@ header .header-nav-bar ul li a svg {
 .activo {
     background-color: var(--blue);
 }
-
 /*END HERO*/
 
 /*BANNER INFO*/
@@ -259,7 +253,7 @@ header .header-nav-bar ul li a svg {
 .contenedor-productos .producto .producto-img {
     height: 10rem;
     width: 100%;
-    background-image: url("./resc/producto2.webp");
+    background-image: url("../resc/producto2.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -274,7 +268,7 @@ header .header-nav-bar ul li a svg {
 }
 
 .contenedor-productos .producto span {
-    background-color: var(--blue);
+    background-color: var(--orange);
     color: var(--white);
     padding: .3rem;
     border-radius: .3rem;
@@ -290,7 +284,7 @@ header .header-nav-bar ul li a svg {
 }
 
 .contenedor-productos .producto button {
-    background-color: var(--orange);
+    background-color: var(--blue);
     padding: .5rem;
     border: none;
     color: var(--white);
@@ -321,7 +315,7 @@ header .header-nav-bar ul li a svg {
 .categoria-img {
     height: 9rem;
     width: 9rem;
-    background-image: url("./resc/producto.webp");
+    background-image: url("../resc/producto.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -338,7 +332,7 @@ footer .footer-info{
     background-color: var(--light-gray);
 }
 footer .footer-info img{
-    height: 7.5rem;
+    height: 9rem;
     margin: 3rem auto 2rem auto;
 }
 footer .rrss{
@@ -370,17 +364,17 @@ footer .legales{
 }
 footer .legales p{
     text-align: center;
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
 }
 footer .legales img{
     height: 5rem;
-    margin: 1rem auto;
+    margin: 1rem auto 2rem auto;
 }
 footer .legales a{
     font-weight: bold;
 }
 footer .legales .btn_arrepentimiento{
-    margin-top: .5rem;
+    margin-top: 1rem;
     padding: .5rem;
     background-color: var(--black);
     border-radius: .5rem;
