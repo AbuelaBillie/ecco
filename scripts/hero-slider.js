@@ -1,4 +1,4 @@
-import {entradas} from "./entradas-hero.js"
+import {entradas} from "./hero-entradas.js"
 
 window.addEventListener("load", function () {
     let container = document.getElementById('noticias');
