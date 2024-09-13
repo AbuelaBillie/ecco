@@ -1,0 +1,284 @@
+/*HERO*/
+.hero {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+#noticias {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    align-items: center;
+}
+
+.noticia {
+    flex: 0 0 100%;
+}
+
+.noticia img {
+    height: 75vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.container-indicadores {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -3rem;
+}
+
+#indicadores {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    background-color: var(--white-shadow);
+    padding: .3rem;
+    border-radius: 1rem;
+    background-color: 0.4;
+}
+
+.indicador {
+    width: .55rem;
+    height: .55rem;
+    border-radius: 50%;
+    background-color: var(--white-shadow);
+    margin: 0 .3rem;
+    cursor: pointer;
+}
+
+.activo {
+    background-color: var(--blue);
+}
+/*END HERO*/
+
+/*BANNER INFO*/
+.banner-info {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 4rem 0;
+}
+.banner-info .container-info-elementos{
+    display: flex;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+}
+.banner-info-element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 100%;
+    padding: 0 2rem;
+}
+
+.banner-info-element-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem;
+    height: 6rem;
+    width: 6rem;
+    background-color: var(--blue);
+    border-radius: 100%;
+    margin-bottom: 1rem;
+}
+
+.banner-info .banner-info-element svg {
+    fill: var(--white);
+}
+
+.banner-info .banner-info-element h3 {
+    margin-bottom: 1rem;
+}
+
+.banner-info .banner-info-element p {
+    text-align: center;
+}
+
+.banner-info .container-indicadores {
+    width: 100%;
+    margin-top: 5rem;
+}
+
+.container-indicadores .indicadores {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-info .container-indicadores .indicadores .indicador {
+    height: .5rem;
+    width: .5rem;
+    background-color: var(--black);
+    margin: .3rem;
+}
+.banner-info .container-indicadores .indicadores .indicador-activo {
+    background-color: var(--blue);
+}
+/*END BANNER INFO*/
+
+/*OFERTAS*/
+.ofertas {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    width: 100%;
+    overflow: scroll;
+}
+
+.off h3 {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-top: 2rem;
+}
+.ver-todo{
+    display: block;
+    text-align: center;
+    font-size: .9rem;
+    padding: .3rem;
+}
+
+.contenedor-productos {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.contenedor-productos .producto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 10rem;
+    border-radius: 1rem;
+    border: solid;
+    border-width: 1px;
+    border-color: var(--light-gray);
+    overflow: hidden;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.contenedor-productos .producto .producto-img {
+    height: 10rem;
+    width: 100%;
+    background-image: url("../resc/producto2.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 1rem;
+}
+
+.contenedor-productos .producto h4 {
+    margin-top: 1rem;
+    height: 2.9rem;
+    overflow: hidden;
+    padding: 0rem 1rem;
+}
+
+.contenedor-productos .producto span {
+    background-color: var(--orange);
+    color: var(--white);
+    padding: .3rem;
+    border-radius: .3rem;
+    font-size: .7rem;
+    margin: -3rem auto 0rem 1rem;
+}
+
+.contenedor-productos .producto p {
+    font-size: .8rem;
+    text-decoration: line-through;
+    margin: auto 1rem;
+}
+.contenedor-productos .producto .producto-off{
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--blue);
+    text-decoration: none;
+    margin-top: 1rem;
+}
+.contenedor-productos .producto button {
+    background-color: var(--blue);
+    padding: .5rem;
+    border: none;
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    margin: 1rem;
+}
+
+/*END OFERTAS*/
+
+/*ALL*/
+.sect-all {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    width: 100%;
+    overflow: scroll;
+}
+.all h3 {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-top: 2rem;
+}
+.all .contenedor-productos .producto p {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--blue);
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+/*END ALL*/
+
+/*CATEGORIAS*/
+.categoria {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 7rem;
+    padding: 1.5rem;
+    margin-bottom: .5rem;
+    border: solid;
+    border-width: 1px;
+    margin: 1rem 2rem;
+    border-radius: 1rem;
+}
+
+.categoria h3 {
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.categoria-img {
+    height: 5rem;
+    width: 5rem;
+    background-image: url("../resc/producto.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.cat-1{
+    background-image: url("../resc/categorias/smartwatch.webp");
+}
+.cat-2{
+    background-image: url("../resc/categorias/auriculares.png");
+}
+.cat-3{
+    background-image: url("../resc/categorias/tv_box.png");
+}
+/*END CATEGORIAS*/
