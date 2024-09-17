@@ -10,6 +10,7 @@
     --white: white;
     --orange: #f14a18;
     --white-shadow: rgba(255, 255, 255, 0.438);
+    --green: green;
 }
 /*END VAR*/
 
@@ -169,4 +170,27 @@ footer .credit a{
     height: .2rem;
     width: 100%;
     background-color: var(--light-gray);
+}
+.talk-to-me{
+    height: 4rem;
+    width: 4rem;
+    padding: .3rem;
+    background-color: var(--green);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:fixed;
+    bottom: 2rem;
+    right: 1rem;
+    z-index: 999;
+    opacity: .8;
+    border: solid;
+    border-width: .2rem;
+    border-color: var(--white);
+}
+.talk-to-me svg{
+    fill: var(--white);
+    height: 2.5rem;
+    width: 2.5rem;
 }

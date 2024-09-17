@@ -1,32 +1,3 @@
-// document.addEventListener('DOMContentLoaded', () => {
-//     const cont_info_element = document.getElementById("container-info-elementos");
-//     const indicador_1 = document.getElementById("banner-info-ind-1");
-//     const indicador_2 = document.getElementById("banner-info-ind-2");
-//     const indicador_3 = document.getElementById("banner-info-ind-3");
-
-//     indicador_1.addEventListener("click",()=>{
-//         indicador_1.classList.add("indicador-activo")
-//         indicador_2.classList.remove("indicador-activo")
-//         indicador_3.classList.remove("indicador-activo")
-//         cont_info_element.style.transform = "translateX(-0%)";
-//     })
-
-//     indicador_2.addEventListener("click",()=>{
-//         indicador_1.classList.remove("indicador-activo")
-//         indicador_2.classList.add("indicador-activo")
-//         indicador_3.classList.remove("indicador-activo")
-//         cont_info_element.style.transform = "translateX(-100%)";
-//     })
-
-//     indicador_3.addEventListener("click",()=>{
-//         indicador_1.classList.remove("indicador-activo")
-//         indicador_2.classList.remove("indicador-activo")
-//         indicador_3.classList.add("indicador-activo")
-//         cont_info_element.style.transform = "translateX(-200%)";
-//     })
-
-// })
-
 document.addEventListener('DOMContentLoaded', () => {
     const cont_info_element = document.getElementById("container-info-elementos");
     const indicador_1 = document.getElementById("banner-info-ind-1");
