@@ -7,7 +7,7 @@ window.addEventListener("load", function () {
     let producto = ``
     productos.forEach(element =>{
         producto += `<a class="producto" id="all-prod-${element.id}" href="">
-            <img class="producto-img" src="/../resc/${element.imagenes[0]}" alt="">
+            <img class="producto-img" src="./resc/${element.imagenes[0]}" alt="">
             <span class="${element.envio_gratis == 1?"":"invisible"}">Envío gratis</span>
             <h4>${element.nombre}</h4>
             <p>$${formatPrecio(element.precio)}</p>
