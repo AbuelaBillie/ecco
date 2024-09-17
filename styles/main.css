@@ -53,6 +53,7 @@
 .activo {
     background-color: var(--blue);
 }
+
 /*END HERO*/
 
 /*BANNER INFO*/
@@ -62,11 +63,13 @@
     overflow: hidden;
     margin: 4rem 0;
 }
-.banner-info .container-info-elementos{
+
+.banner-info .container-info-elementos {
     display: flex;
     align-items: center;
     transition: transform 0.5s ease-in-out;
 }
+
 .banner-info-element {
     display: flex;
     flex-direction: column;
@@ -117,9 +120,11 @@
     background-color: var(--black);
     margin: .3rem;
 }
+
 .banner-info .container-indicadores .indicadores .indicador-activo {
     background-color: var(--blue);
 }
+
 /*END BANNER INFO*/
 
 /*OFERTAS*/
@@ -131,6 +136,15 @@
     margin-bottom: 2rem;
     width: 100%;
     overflow: scroll;
+    -ms-overflow-style: none;
+    /* Para Internet Explorer y Edge */
+    scrollbar-width: none;
+    /* Para Firefox */
+}
+
+.ofertas::-webkit-scrollbar {
+    display: none;
+    /* Para Chrome, Safari y otros navegadores WebKit */
 }
 
 .off h3 {
@@ -140,17 +154,20 @@
     font-size: 1.3rem;
     margin-top: 2rem;
 }
-.ver-todo{
+
+.ver-todo {
     display: block;
     text-align: center;
-    font-size: .9rem;
+    font-size: .8rem;
     padding: .3rem;
+    text-decoration: underline;
 }
 
 .contenedor-productos {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
+
 .contenedor-productos .producto {
     display: flex;
     flex-direction: column;
@@ -167,13 +184,10 @@
 }
 
 .contenedor-productos .producto .producto-img {
-    height: 10rem;
+    height:8rem;
     width: 100%;
-    background-image: url("../resc/producto2.webp");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-top: 1rem;
+    object-fit: contain;
+    margin: 1rem auto .5rem auto;
 }
 
 .contenedor-productos .producto h4 {
@@ -181,6 +195,8 @@
     height: 2.9rem;
     overflow: hidden;
     padding: 0rem 1rem;
+    text-overflow: ellipsis;
+    width: 100%;
 }
 
 .contenedor-productos .producto span {
@@ -197,13 +213,15 @@
     text-decoration: line-through;
     margin: auto 1rem;
 }
-.contenedor-productos .producto .producto-off{
+
+.contenedor-productos .producto .producto-off {
     font-weight: bold;
     font-size: 1.1rem;
     color: var(--blue);
     text-decoration: none;
     margin-top: 1rem;
 }
+
 .contenedor-productos .producto button {
     background-color: var(--blue);
     padding: .5rem;
@@ -226,7 +244,17 @@
     margin-bottom: 2rem;
     width: 100%;
     overflow: scroll;
+    -ms-overflow-style: none;
+    /* Para Internet Explorer y Edge */
+    scrollbar-width: none;
+    /* Para Firefox */
 }
+
+.sect-all::-webkit-scrollbar {
+    display: none;
+    /* Para Chrome, Safari y otros navegadores WebKit */
+}
+
 .all h3 {
     width: 100%;
     text-align: center;
@@ -234,6 +262,7 @@
     font-size: 1.3rem;
     margin-top: 2rem;
 }
+
 .all .contenedor-productos .producto p {
     font-weight: bold;
     font-size: 1.1rem;
@@ -272,13 +301,16 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-.cat-1{
+
+.cat-1 {
     background-image: url("../resc/categorias/smartwatch.webp");
 }
-.cat-2{
+
+.cat-2 {
     background-image: url("../resc/categorias/auriculares.png");
 }
-.cat-3{
+
+.cat-3 {
     background-image: url("../resc/categorias/tv_box.png");
 }
 /*END CATEGORIAS*/

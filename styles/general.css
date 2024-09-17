@@ -162,6 +162,9 @@ footer .credit a{
 .oculto {
     display: none;
 }
+.invisible{
+    visibility: hidden;
+}
 .divisor-secciones, .divisor-secciones-alt{
     height: .2rem;
     width: 100%;
