@@ -12,7 +12,7 @@ window.addEventListener("load", function () {
 
     productos.forEach(element => {
         if (element.activo == 1 && element.home == 1 && element.off == 0) {
-            producto += `<a class="producto" id="all-prod-${element.id}" href="../pages/productos.html">
+            producto += `<a class="producto" id="all-prod-${element.id}" href="./pages/producto.html">
                 <img class="producto-img" src="./resc/${element.imagenes[0]}" alt="">
                 <span class="${element.envio_gratis == 1 ? "" : "invisible"}">Envío gratis</span>
                 <h4>${element.nombre}</h4>
@@ -20,7 +20,7 @@ window.addEventListener("load", function () {
                 <button>Comprar</button>
               </a>`
         } else if (element.activo == 1 && element.home == 1) {
-            oferta += `<a class="producto" id="off-prod-${element.id}" href="../pages/productos.html">
+            oferta += `<a class="producto" id="off-prod-${element.id}" href="./pages/producto.html">
             <img class="producto-img" src="./resc/${element.imagenes[0]}" alt="">
             <span class="${element.envio_gratis == 1 ? "" : "invisible"}">Envío gratis</span>
             <h4>${element.nombre}</h4>

@@ -35,14 +35,14 @@ a {
 
 /*HEADER*/
 header .info-header {
-    background-color: var(--blue);
+    background-color: var(--orange);
 }
 
 header .info-header p {
     color: var(--white);
     text-align: center;
     padding: .3rem;
-    font-size: .6rem;
+    font-size: .7rem;
 }
 
 header .header-logo {
@@ -185,9 +185,6 @@ footer .credit a{
     right: 1rem;
     z-index: 999;
     opacity: .8;
-    border: solid;
-    border-width: .2rem;
-    border-color: var(--white);
 }
 .talk-to-me svg{
     fill: var(--white);

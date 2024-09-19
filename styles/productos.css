@@ -1,0 +1,61 @@
+header{
+    box-shadow: 2px 7px 12px -3px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 2px 7px 12px -3px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 2px 7px 12px -3px rgba(0, 0, 0, 0.3);
+}
+.producto-expandido{
+    padding: 2rem;
+}
+.expand-contenedor-imagenes{
+    height: 20rem;
+    margin-bottom: 1rem;
+}
+.expand-contenedor-imagenes img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    overflow: hidden;
+}
+.producto-expandido h2{
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.producto-expandido h3{
+    font-weight: bold;
+    color: var(--orange);
+    margin-bottom: 1rem;
+}
+.producto-expandido p{
+    margin-top: 1rem;
+    text-transform: uppercase;
+    font-size: .8rem;
+    margin-bottom: .3rem;
+}
+.producto-expandido select{
+    width: 100%;
+    font-size: .8rem;
+    padding: .3rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    border-radius: .3rem;
+}
+.producto-expandido button{
+    width: 100%;
+    padding: .8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: .3rem;
+}
+.producto-expandido h4{
+    margin-top: 2rem;
+    text-transform: uppercase;
+    font-size: .8rem;
+    margin-bottom: .3rem;
+}
+.expand-descripcion{
+    font-size: .8rem;
+}
