@@ -59,3 +59,39 @@ header{
 .expand-descripcion{
     font-size: .8rem;
 }
+
+.all-productos .list-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+.all-productos .list-header button{
+    display: flex;
+    padding: .5rem;
+    background-color: var(--white);
+    border: none;
+    border: solid;
+    border-color: var(--gray);
+    border-width: 1px;
+    border-radius: .3rem;
+}
+.all-productos .list-header button p{
+    font-size: .8rem;
+    text-transform: uppercase;
+    margin-right: .5rem;
+}
+.all-productos .list-header button svg{
+    height: .9rem;
+}
+.all-productos .contenedor-productos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.all-productos .contenedor-productos .producto{
+    margin: .6rem;
+}
