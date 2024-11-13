@@ -31,4 +31,9 @@ public class ProductoController {
     public Collection<Producto> todosLosProductosActivos() {
         return productoService.todosLosProductosActivos();
     }
+
+    @GetMapping("/all-off-active")
+    public Collection<Producto> todasLasOfertasActivas() {
+        return productoService.todasLasOfertasActivas();
+    }
 }

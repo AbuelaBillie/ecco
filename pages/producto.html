@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../styles/main.css">
   <link rel="stylesheet" href="../styles/productos.css">
   <script type="module" src="../scripts/productos/producto-render.js"></script>
-  <title>Pulse Line Tech</title>
+  <title>Producto | Pulse Line Tech</title>
 </head>
 
 <body>
@@ -59,11 +59,27 @@
   </header>
   <main>
     <section class="producto-expandido">
-      <div class="expand-contenedor-imagenes">
+      <div class="expand-contenedor-imagenes" id="contenedor-imagenes">
         <img src="../resc/producto.webp" alt="">
       </div>
-      <h2>Notebook PEPEresoso Intel Core I3 11va Gen | X515EA-EJ1342</h2>
-      <h3>$3.566.728.94</h3>
+      <div class="contenedor-imagenes-indicadores">
+        <div id="indicadores">
+          <div class="indicador"></div>
+          <div class="indicador"></div>
+          <div class="indicador "></div>
+          <div class="indicador"></div>
+          <div class="indicador activo"></div>
+          <div class="indicador"></div>
+        </div>
+      </div>
+      <div class="producto-tags">
+        <span><a href="./productos.html">Productos</a> - </span>
+        <span><a href="./productos.html">Notebooks</a> - </span>
+        <span><a href="./productos.html">Asus</a></span>
+      </div>
+      <h2 id="producto-title">-</h2>
+      <p class="producto-off" id="producto-off"></p>
+      <h3 id="producto-precio">-</h3>
       <div class="divisor-secciones"></div>
       <p>Variante</p>
       <select name="" id="">
@@ -72,12 +88,12 @@
       </select>
       <button>Agregar al carrito</button>
       <h4>Descripción</h4>
-      <div class="expand-descripcion">Esta notebook está, efectivamente, hecha de notebook.</div>
+      <div class="expand-descripcion" id="producto-descripcion">Esta notebook está, efectivamente, hecha de notebook.</div>
     </section>
     <div class="divisor-secciones"></div>
     <div class="off">
       <h3>Ofertas</h3>
-      <a class="ver-todo" href="./productos.html">Ver todo</a>
+      <a class="ver-todo" href="./ofertas.html">Ver todo</a>
       <section class="ofertas">
         <div class="contenedor-productos contenedor-ofertas" id="contenedor-productos">
         </div>

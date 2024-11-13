@@ -15,4 +15,7 @@ public interface IProductoService {
 
     //TRAER TODOS LOS PRODUCTOS ACTIVOS
     public Collection<Producto> todosLosProductosActivos();
+
+    //TRAER TODAS LAS OFERTAS ACTIVAS
+    public Collection<Producto> todasLasOfertasActivas();
 }

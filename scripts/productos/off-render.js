@@ -1,5 +1,5 @@
 import {  } from "../header-nav-scroll.js";
-import { productosActivos } from "../DB/get-productos.js";
+import { ofertasActivas } from "../DB/get-productos.js";
 import { formatPrecio } from "../UTILS/format-precio.js";
 window.addEventListener("load", async function () {
     let contenedor_productos = document.getElementById('contenedor-all-productos');
@@ -9,7 +9,7 @@ window.addEventListener("load", async function () {
     let producto = ``
 
     try {
-        const productos = await productosActivos()
+        const productos = await ofertasActivas()
         
         productos.forEach(element => {
                 producto += `
@@ -17,7 +17,8 @@ window.addEventListener("load", async function () {
                     <img class="producto-img" src="../../resc/${element.imagen_principal}" alt="">
                     <span class="${element.envio_gratis == 1 ? "" : "invisible"}">Envío gratis</span>
                     <h4>${element.nombre}</h4>
-                    ${element.off == 0 ? "<p class='invisible'>-</p><p class='producto-off'>"+formatPrecio(element.precio)+"</p>" : '<p>$'+formatPrecio(element.precio)+'</p><p class="producto-off">$'+formatPrecio(element.precio - (Math.floor((element.precio * element.off) / 100)))+'</p>'}
+                    <p>${formatPrecio(element.precio)}</p>
+                    <p class="producto-off">${formatPrecio(element.precio - (Math.floor((element.precio * element.off) / 100)))}</p>
                     <button>Comprar</button>
                 </a>`
         })

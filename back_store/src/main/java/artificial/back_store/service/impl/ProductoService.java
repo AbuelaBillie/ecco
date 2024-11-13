@@ -33,4 +33,10 @@ public class ProductoService implements IProductoService {
         return productoRepository.todosLosProductosActivos();
     }
 
+    //TRAER TODAS LAS OFERTAS ACTIVAS
+    @Override
+    public Collection<Producto> todasLasOfertasActivas() {
+        return productoRepository.todasLasOfertasActivas();
+    }
+
 }

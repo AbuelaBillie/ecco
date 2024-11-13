@@ -27,11 +27,10 @@ public class Producto {
     private Short off;
     private Short envio_gratis;
     private String imagen_principal;
-      /* "dim_alto":5,
-               "dim_ancho":10,
-               "dim_prof":23,
-               "peso":1300,
-               "etiquetas":["moda","notebooks", "estudio"],
-               "variante":["blanco", "negro", "rosa gold"] SKU*/
+
+    @ManyToOne
+    @JoinColumn(name = "categoria_id")
+    private Categoria categoria;
+
 
 }

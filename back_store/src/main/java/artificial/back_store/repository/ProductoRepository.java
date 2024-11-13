@@ -18,4 +18,7 @@ public interface ProductoRepository extends JpaRepository<Producto,Integer> {
     @Query(value = "SELECT * FROM productos p WHERE p.estado = 1", nativeQuery = true)
     Collection<Producto> todosLosProductosActivos();
 
+    //TRAER TODAS LAS OFERTAS ACTIVAS
+    @Query(value = "SELECT * FROM productos p WHERE p.estado = 1 AND p.off > 0", nativeQuery = true)
+    Collection<Producto> todasLasOfertasActivas();
 }

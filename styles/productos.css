@@ -16,6 +16,25 @@ header{
     object-fit: contain;
     overflow: hidden;
 }
+.producto-expandido .contenedor-imagenes-indicadores{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#indicadores {
+    background-color: none;
+}
+.indicador {
+    background-color: var(--gray);
+}
+.producto-expandido .contenedor-imagenes-indicadores .activo {
+    background-color: var(--blue);
+}
+.producto-expandido .producto-tags{
+    font-size: .8rem;
+    margin-bottom: .5rem;
+}
 .producto-expandido h2{
     margin-bottom: 1rem;
     font-size: 1.2rem;
@@ -31,6 +50,10 @@ header{
     text-transform: uppercase;
     font-size: .8rem;
     margin-bottom: .3rem;
+}
+.producto-expandido .producto-off {
+    font-size: .8rem;
+    text-decoration: line-through;
 }
 .producto-expandido select{
     width: 100%;
