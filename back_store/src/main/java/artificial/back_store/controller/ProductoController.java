@@ -1,12 +1,15 @@
 package artificial.back_store.controller;
 
 import artificial.back_store.model.Producto;
+import artificial.back_store.service.impl.CategoriaService;
 import artificial.back_store.service.impl.ProductoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
 
 @RequiredArgsConstructor
@@ -16,6 +19,7 @@ import java.util.Optional;
 public class ProductoController {
     @Autowired
     ProductoService productoService;
+
 
     @GetMapping("/home")
     public Collection<Producto> productosDelHome() {
@@ -36,4 +40,5 @@ public class ProductoController {
     public Collection<Producto> todasLasOfertasActivas() {
         return productoService.todasLasOfertasActivas();
     }
+
 }

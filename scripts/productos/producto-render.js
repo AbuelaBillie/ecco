@@ -1,18 +1,28 @@
 import {  } from "../header-nav-scroll.js";
 import { dominio } from "../../rutas.js";
 import { productoPorID, productosDelHome } from "../DB/get-productos.js";
+import { rutaCategoria } from "../DB/get-categorias.js";
 import { formatPrecio } from "../UTILS/format-precio.js";
 window.addEventListener("load", async function () {
     //PRODUCTO EXPANDIDO
     const urlParams = new URLSearchParams(window.location.search);
     const id_producto = urlParams.get('id');
     let contenedor_imagenes = document.getElementById('contenedor-imagenes');
+    let producto_tags = document.getElementById('producto-tags');
     let producto_title = document.getElementById('producto-title');
     let producto_precio = document.getElementById('producto-precio');
     let producto_off = document.getElementById('producto-off');
     let producto_descripcion = document.getElementById('producto-descripcion');
     try {
         const producto = await productoPorID(id_producto)
+        const categorias = await rutaCategoria(producto.categoria.id) 
+
+        let tag = ""
+        categorias.forEach(element => {
+            tag += `<span> - <a href="./productos.html">${element}</a></span>`
+        });
+        producto_tags.innerHTML= '<span><a href="./productos.html">Productos</a></span>' + tag 
+        
         contenedor_imagenes.innerHTML = `<img src="../resc/${producto.imagen_principal}" alt="">`
         producto_title.innerHTML = producto.nombre
         if (producto.estado == 1 && producto.off == 0) {
@@ -24,8 +34,7 @@ window.addEventListener("load", async function () {
         }
         producto_descripcion.innerHTML = producto.descripcion
     } catch (error) {
-        console.log(error);
-        // window.location.href =  `${dominio}/index.html`;
+        window.location.href =  `${dominio}/index.html`;
     }
 
 
