@@ -296,21 +296,5 @@
 .categoria-img {
     height: 5rem;
     width: 5rem;
-    background-image: url("../resc/producto.webp");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.cat-1 {
-    background-image: url("../resc/categorias/smartwatch.webp");
-}
-
-.cat-2 {
-    background-image: url("../resc/categorias/auriculares.png");
-}
-
-.cat-3 {
-    background-image: url("../resc/categorias/tv_box.png");
 }
 /*END CATEGORIAS*/

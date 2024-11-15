@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 
 @RequiredArgsConstructor
 @RestController
@@ -20,8 +21,8 @@ public class CategoriaController {
     CategoriaService categoriaService;
 
     @GetMapping("/ruta")
-    public ResponseEntity<List<String>> obtenerRuta(@RequestParam Integer id) {
-        List<String> ruta = categoriaService.obtenerRuta(id);
+    public ResponseEntity<List<Map<String, Object>>> obtenerRuta(@RequestParam Integer id) {
+        List<Map<String, Object>> ruta = categoriaService.obtenerRuta(id);
         return ResponseEntity.ok(ruta);
     }
 

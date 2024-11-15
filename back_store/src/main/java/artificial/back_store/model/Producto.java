@@ -1,9 +1,11 @@
 package artificial.back_store.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Date;
+import java.util.List;
 
 @Getter
 @Setter
@@ -32,5 +34,7 @@ public class Producto {
     @JoinColumn(name = "categoria_id")
     private Categoria categoria;
 
-
+    @OneToMany(mappedBy = "producto", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    private List<Imagen> imagenes;
 }

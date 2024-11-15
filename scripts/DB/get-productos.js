@@ -36,3 +36,12 @@ export async function productoPorID(id) {
         return error;
     }
 }
+
+export async function productosActivosPorCategoria(id) {
+    try {
+        const datos = await getAPI(`${api}/prod/cat?id=${id}`);
+        return datos;
+    } catch (error) {
+        return error;
+    }
+}

@@ -20,6 +20,8 @@ public class ProductoController {
     @Autowired
     ProductoService productoService;
 
+    @Autowired
+    CategoriaService categoriaService;
 
     @GetMapping("/home")
     public Collection<Producto> productosDelHome() {
@@ -39,6 +41,12 @@ public class ProductoController {
     @GetMapping("/all-off-active")
     public Collection<Producto> todasLasOfertasActivas() {
         return productoService.todasLasOfertasActivas();
+    }
+
+    @GetMapping("/cat")
+    public ResponseEntity<List<Producto>> listarProductosPorCategoria(@RequestParam Integer id) {
+        List<Producto> productos = categoriaService.listarProductosPorCategoria(id);
+        return ResponseEntity.ok(productos);
     }
 
 }

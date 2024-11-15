@@ -9,3 +9,12 @@ export async function rutaCategoria(id) {
         return error;
     }
 }
+
+export async function categoriasDelHome() {
+    try {
+        const datos = await getAPI(`${api}/cat/home`);
+        return datos;
+    } catch (error) {
+        return error;
+    }
+}

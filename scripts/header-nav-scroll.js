@@ -1,3 +1,4 @@
+import { listarMenu } from "./header-nav-info.js";
 window.addEventListener("scroll", () => {
     const header = document.getElementById("header");
     const header_nav_bar = document.getElementById("header-nav-bar");
@@ -18,6 +19,7 @@ window.addEventListener("scroll", () => {
     btn_menu.addEventListener("click", ()=>{
         if (submenu.style.display === "block") {
             submenu.style.display = "none"
+            listarMenu()
         }else{
             submenu_lupa.style.display = "none"
             submenu.style.display = "block"

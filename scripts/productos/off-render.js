@@ -14,7 +14,7 @@ window.addEventListener("load", async function () {
         productos.forEach(element => {
                 producto += `
                 <a class="producto" id="all-prod-${element.id}" href="./producto.html?id=${element.id}">
-                    <img class="producto-img" src="../../resc/${element.imagen_principal}" alt="">
+                    <img class="producto-img" src="../../resc/productos/${element.imagen_principal}" alt="">
                     <span class="${element.envio_gratis == 1 ? "" : "invisible"}">Envío gratis</span>
                     <h4>${element.nombre}</h4>
                     <p>${formatPrecio(element.precio)}</p>

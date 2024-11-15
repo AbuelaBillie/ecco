@@ -6,28 +6,42 @@ header{
 .producto-expandido{
     padding: 2rem;
 }
-.expand-contenedor-imagenes{
+.expand-contenedor-imagenes {
     height: 20rem;
     margin-bottom: 1rem;
-}
-.expand-contenedor-imagenes img{
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
+    position: relative;
     overflow: hidden;
+    display: flex;
 }
-.producto-expandido .contenedor-imagenes-indicadores{
+
+.imagen-carrousel {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.producto-expandido .contenedor-imagenes-indicadores {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 #indicadores {
-    background-color: none;
+    display: flex;
+    gap: 0.5rem;
 }
+
 .indicador {
+    width: .55rem;
+    height: .55rem;
     background-color: var(--gray);
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 .3rem;
 }
+
 .producto-expandido .contenedor-imagenes-indicadores .activo {
     background-color: var(--blue);
 }
@@ -85,10 +99,13 @@ header{
 
 .all-productos .list-header{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     padding: 1rem;
     margin-top: 1rem;
+}
+.all-productos .list-header h3{
+   padding: .3rem;
 }
 .all-productos .list-header button{
     display: flex;
@@ -108,6 +125,23 @@ header{
 .all-productos .list-header button svg{
     height: .9rem;
 }
+.all-productos .list-header .filtros-aplicados{
+   margin-top: .5rem;
+   margin-left: .2rem;
+}
+.all-productos .list-header .filtros-aplicados button{
+    font-size: .7rem;
+    padding: .3rem;
+    margin-top: .3rem;
+ }
+ .all-productos .list-header .filtros-aplicados button:hover{
+   cursor: pointer;
+   background-color: var(--gray);
+ }
+ .all-productos .list-header .filtros-aplicados button svg{
+    width: .5rem;
+    margin-left: .5rem;
+ }
 .all-productos .contenedor-productos{
     display: flex;
     align-items: center;

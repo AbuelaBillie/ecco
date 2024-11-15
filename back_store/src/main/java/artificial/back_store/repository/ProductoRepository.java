@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.Collection;
+import java.util.List;
 
 @Repository
 public interface ProductoRepository extends JpaRepository<Producto,Integer> {
@@ -22,4 +23,6 @@ public interface ProductoRepository extends JpaRepository<Producto,Integer> {
     @Query(value = "SELECT * FROM productos p WHERE p.estado = 1 AND p.off > 0", nativeQuery = true)
     Collection<Producto> todasLasOfertasActivas();
 
+    //TRAER PRODUCTOS POR CATEGORIA
+    List<Producto> findByCategoriaIdIn(List<Integer> categoriaIds);
 }
